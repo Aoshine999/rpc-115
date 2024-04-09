@@ -1,7 +1,7 @@
 package com.rpc115.example.consumer;
 import com.rpc115.example.common.model.User;
 import com.rpc115.example.common.service.UserService;
-import com.mglyy.rpc115.proxy.*;
+import com.mglyy.rpc115.proxy.ServiceProxyFactory;
 
 
 /**

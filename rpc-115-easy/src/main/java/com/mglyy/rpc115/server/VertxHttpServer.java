@@ -15,6 +15,20 @@ public class VertxHttpServer implements HttpServer{
         server.requestHandler(request -> {
            //处理HTTP请求
             System.out.println("Received request: " + request.method() + " " + request.uri());
+            request.response()
+                    .putHeader("content-type","text/plain")
+                    .end("Hello from Vert.x HTTP server!");
         });
+
+        //启动HTTP服务其监听指定端口
+        server.listen(port,result->{
+           if(result.succeeded()) {
+               System.out.println("Server is now listening on port" + port);
+           }else {
+               System.err.println("Failed to start server:" + result.cause());
+           }
+        });
+
+
     }
 }
