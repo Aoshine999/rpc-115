@@ -11,7 +11,7 @@ import com.mglyy.rpc115.proxy.ServiceProxyFactory;
 public class EasyConsumerExample {
     public static void main(String[] args) {
         // todo 获取UserService的实体类对象
-        UserService userService = null;
+        UserService userService = ServiceProxyFactory.getProxy(UserService.class);
         User user = new User();
         user.setName("115");
         //调用
@@ -22,4 +22,5 @@ public class EasyConsumerExample {
             System.out.println("user==null");
         }
     }
+
 }

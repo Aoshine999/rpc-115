@@ -13,6 +13,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="rpc-115-core" />
         <module name="example-provider" />
         <module name="example-consumer" />
         <module name="example-common" />
